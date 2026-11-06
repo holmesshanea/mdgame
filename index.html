@@ -11,17 +11,19 @@
 .shell{width:min(1120px,100% - 48px);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:17px 0}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.06em}.logo{width:35px;height:35px;border:1px solid #8c7545;border-radius:50%;display:grid;place-items:center;color:var(--gold)}.sound,.secondary{border:1px solid var(--line);background:#252e23;color:var(--cream);border-radius:8px;padding:9px 12px;min-height:44px}.eyebrow,.small,.stage small,.meter-label{font:700 11px ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}.eyebrow{color:var(--gold)}.intro{padding:29px 0 21px}h1,h2{font-family:Georgia,serif;font-weight:normal;margin:0}h1{font-size:clamp(44px,8vw,90px);letter-spacing:-.065em;line-height:1.03}.intro p{margin:9px 0 0;color:var(--muted)}.stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:16px}.stage{padding:10px 13px;border:1px solid var(--line);background:var(--panel);border-radius:9px;display:flex;gap:11px;align-items:center;color:var(--muted)}.stage b{display:block;font-size:14px}.stage small{display:block;margin-top:3px}.stage.active{border-color:var(--gold);color:var(--cream);background:#363225}.stage.done .num{color:#c5e5a4}.num{color:var(--gold);font:700 15px ui-monospace,monospace}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 292px;gap:14px;align-items:start}.panel{border:1px solid var(--line);border-radius:13px;background:var(--panel);overflow:hidden}.map-head{padding:13px 17px;display:flex;align-items:center;justify-content:space-between;gap:10px}.map-head h2{font-size:26px}.map-head .small{color:var(--gold)}.terrain{position:relative;isolation:isolate;padding:14px 19px 25px;min-height:290px;background:#c29a64;overflow:hidden}.art{position:absolute;inset:0;width:100%;height:100%;z-index:-1}.terrain.park{background:#98aa75}.terrain.yard{background:#819661}.terrain.farm{background:#a47955}.grid{display:grid;gap:3px;max-width:535px;margin:0 auto}.cell{position:relative;aspect-ratio:1.52;border:1px solid #241b1859;background:#ffedbc13;border-radius:4px;padding:0;color:#241e15;font-weight:900;font-size:clamp(12px,3.4vw,24px);line-height:1}.cell:hover{background:#fff8ce67}.cell.swept{background:#ffeab04d}.cell.weak{background:#e7e48777}.cell.hot{background:#ffd36cb0}.cell.dug{background:#31251e9e;color:white}.cell.selected{outline:2px solid white;outline-offset:-3px;box-shadow:0 0 0 2px #44351c;z-index:1}.coords{display:flex;justify-content:space-between;margin:0 auto 8px;max-width:535px;color:#302719}.legend{padding:11px 16px;color:var(--muted);font-size:12px;display:flex;flex-wrap:wrap;gap:7px 14px}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;background:var(--dot)}.side{display:grid;gap:12px}.detector,.pouch{padding:15px}.detector h2,.pouch h2{font-size:25px}.readout{background:#151e17;border:1px solid #3a4a39;border-radius:9px;padding:12px;margin:12px 0;color:#d2e8ba}.meter-label{display:flex;justify-content:space-between;gap:4px}.bars{display:flex;gap:4px;margin-top:10px}.bars span{height:13px;flex:1;background:#32402f;border-radius:2px}.bars .lit{background:#d0e7a5}.status{min-height:42px;font-size:13px;color:var(--muted);margin:0 0 9px}.action{width:100%;min-height:48px;border:0;border-radius:8px;background:var(--gold);color:#231d12;font-weight:800;padding:9px}.action:disabled{background:#424438;color:#c2bead}.stats{display:flex;gap:10px;justify-content:space-between;margin:12px 0 0;color:var(--muted);font-size:13px}.stats b{color:var(--cream)}.log{list-style:none;padding:0;margin:9px 0 0;max-height:156px;overflow:auto;font-size:13px;color:var(--muted)}.log li{padding:6px 0;border-top:1px solid var(--line)}.log strong{color:var(--cream)}.help{margin:17px 0 24px;color:var(--muted);font-size:14px}.help summary{cursor:pointer;color:var(--gold);padding:8px 0}.help p{max-width:70ch;margin:4px 0 8px}.bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}.result{border:1px solid var(--gold);border-radius:8px;background:#363225;margin:0 0 12px;padding:12px;color:var(--cream)}.result p{margin:0 0 8px}.result .action{min-height:44px}[hidden]{display:none!important}
 @media(max-width:760px){.shell{width:calc(100% - 24px)}.layout{grid-template-columns:1fr;gap:10px}.side{display:contents}.detector{grid-row:1}.pouch{grid-row:3}.detector{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:7px 10px;padding:11px}.detector h2,.status,.stats,.result{grid-column:1/-1}.status{margin:0;min-height:20px}.readout{margin:0;padding:8px}.detector .action{align-self:stretch}.stats{margin:0}.intro{padding:16px 0 13px}.top{padding:10px 0}.stages{margin-bottom:10px}.stage{gap:5px;padding:7px 6px}.stage b{font-size:12px}.stage small{font-size:9px;letter-spacing:.03em}.terrain{padding:10px 8px 15px;min-height:0}.map-head{padding:9px 11px}.cell{aspect-ratio:1.05}.grid{gap:2px}}
-#find-reveal{width:min(380px,calc(100% - 30px));max-height:calc(100dvh - 30px);padding:16px;border:1px solid #8c7545;border-radius:16px;background:#20271e;color:var(--cream);text-align:center;box-shadow:0 24px 80px #080a06bb}
-#find-reveal::backdrop{background:#0a100bd9}
+#find-reveal,#level-cleared{width:min(380px,calc(100% - 30px));max-height:calc(100dvh - 30px);padding:16px;border:1px solid #8c7545;border-radius:16px;background:#20271e;color:var(--cream);text-align:center;box-shadow:0 24px 80px #080a06bb}
+#find-reveal::backdrop,#level-cleared::backdrop{background:#0a100bd9}
 #find-art{display:block;width:100%;max-height:32dvh;margin:0 auto 14px;border-radius:9px;background:#151e17}
-#find-title{font-size:clamp(26px,7vw,36px);margin:5px 0 14px}
+#find-title,#clear-title{font-size:clamp(26px,7vw,36px);margin:5px 0 14px}
+.clear-badge{display:grid;place-items:center;width:64px;height:64px;margin:5px auto 14px;border:1px solid #8c7545;border-radius:50%;background:#363225;color:var(--gold);font-size:34px}
+#clear-message{margin:0 0 17px;color:var(--muted)}
 .stats{flex-wrap:wrap}
 @media(max-width:420px){.stages{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="top"><div class="brand"><span class="logo" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="16" rx="9" ry="4"/><ellipse cx="12" cy="16" rx="5" ry="2"/><path d="m12 14 4-10h4"/></svg></span>GROUND SIGNAL</div><button id="sound" class="sound" aria-pressed="false">Sound off</button></header>
+<header class="top"><div class="brand"><span class="logo" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="16" rx="9" ry="4"/><ellipse cx="12" cy="16" rx="5" ry="2"/><path d="m12 14 4-10h4"/></svg></span>GROUND SIGNAL</div><button id="sound" class="sound" aria-pressed="true">Sound on</button></header>
 <main>
 <div class="intro"><span class="eyebrow">FIELD GUIDE / VOL. 01</span><h1>Ground Signal</h1><p>Sweep the ground. Follow the signal. Dig up a piece of the past.</p></div>
 <nav class="stages" id="stages" aria-label="Hunt progression"></nav>
@@ -44,6 +46,13 @@
   <h2 id="find-title"></h2>
   <form method="dialog"><button class="action" id="find-action" autofocus>Add to finds pouch</button></form>
 </dialog>
+<dialog id="level-cleared" aria-labelledby="clear-title" aria-describedby="clear-message">
+  <div class="clear-badge" aria-hidden="true">★</div>
+  <span class="eyebrow" id="clear-kind">Level cleared</span>
+  <h2 id="clear-title">Congratulations!</h2>
+  <p id="clear-message"></p>
+  <button class="action" id="clear-next" autofocus>Next location</button>
+</dialog>
 <script>
 'use strict';
 const levels = [
@@ -56,8 +65,16 @@ const totalFinds = levels.reduce((total, entry) => total + entry.finds.length, 0
 const $ = id => document.getElementById(id);
 const grid = $('grid');
 const reveal = $('find-reveal');
+const levelCleared = $('level-cleared');
+$('clear-next').onclick = () => {
+  levelCleared.close();
+  $('next').click();
+};
+levelCleared.addEventListener('close', () => {
+  if (ended) $('next').focus();
+});
 let pendingFind;
-let levelIndex, level, targets, holes, scanned, tiles, selected, digs, sweeps, found, ended, pouch, sound = false, audio;
+let levelIndex, level, targets, holes, scanned, tiles, selected, digs, sweeps, found, ended, pouch, sound = true, audio;
 function randomInt(limit) { return Math.floor(Math.random() * limit); }
 function start(index) {
   levelIndex = index;
@@ -207,8 +224,15 @@ function finish(won, reason) {
   if (won) {
     $('stages').children[levelIndex].classList.add('done');
     $('stages').children[levelIndex].querySelector('small').textContent = 'Cleared';
+    $('clear-kind').textContent = last ? 'Expedition complete' : 'Level cleared';
+    $('clear-message').textContent = last
+      ? 'You cleared ' + level.name + ' and recovered all ' + totalFinds + ' treasures!'
+      : 'You cleared ' + level.name + '! Next up is ' + levels[levelIndex + 1].location + '.';
+    $('clear-next').textContent = $('next').textContent;
+    levelCleared.showModal();
+  } else {
+    $('next').focus();
   }
-  $('next').focus();
 }
 
 function render() {
@@ -310,8 +334,22 @@ function paintTerrain() {
   }).join('');
   $('art').innerHTML = motifs[level.theme] + texture;
 }
-function beep(frequency) {
-  if (!sound || !audio) return;
+const Audio = window.AudioContext || window.webkitAudioContext;
+if (!Audio) {
+  sound = false;
+  $('sound').setAttribute('aria-pressed', 'false');
+  $('sound').textContent = 'Sound unavailable';
+  $('sound').disabled = true;
+}
+async function beep(frequency) {
+  if (!sound) return;
+  try {
+    audio ??= new Audio();
+    if (audio.state !== 'running') await audio.resume();
+  } catch {
+    return;
+  }
+  if (!sound) return;
   const oscillator = audio.createOscillator();
   const volume = audio.createGain();
   const now = audio.currentTime;
@@ -322,28 +360,11 @@ function beep(frequency) {
   oscillator.start(now);
   oscillator.stop(now + .14);
 }
-$('sound').onclick = async () => {
-  const Audio = window.AudioContext || window.webkitAudioContext;
-  if (!Audio) {
-    $('sound').textContent = 'Sound unavailable';
-    $('sound').disabled = true;
-    return;
-  }
+$('sound').onclick = () => {
   sound = !sound;
   $('sound').setAttribute('aria-pressed', String(sound));
   $('sound').textContent = sound ? 'Sound on' : 'Sound off';
-  if (sound) {
-    try {
-      audio ??= new Audio();
-      await audio.resume();
-      beep(640);
-    } catch {
-      sound = false;
-      $('sound').setAttribute('aria-pressed', 'false');
-      $('sound').textContent = 'Sound unavailable';
-      $('sound').disabled = true;
-    }
-  }
+  if (sound) beep(640);
 };
 grid.addEventListener('keydown', event => {
   const i = tiles.indexOf(event.target);
