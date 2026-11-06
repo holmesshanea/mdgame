@@ -37,7 +37,7 @@
 <section class="panel pouch"><h2>Finds pouch</h2><ul class="log" id="log"></ul></section>
 </aside>
 </div>
-<details class="help"><summary>How to play</summary><p>Tap or click a square to sweep it. Follow stronger readings across nearby squares, then dig where the meter peaks. A full meter means metal is directly below, but it could be treasure or scrap.</p><p>Your sweep budget drops by five each location. Sweeping a new tile uses one sweep. You can recheck scanned tiles without spending another. Junk and ghost targets (empty holes) use a dig and are marked with ×. Good finds, including modern clad coins, are marked with ★. If you run out of sweeps, you can still dig any peaks you already located. Find the required treasures to advance. On a keyboard, use the arrow keys to move between tiles, Enter or Space to sweep, and D to dig.</p></details>
+<details class="help"><summary>How to play</summary><p>Tap or click a square to sweep it. Follow stronger readings across nearby squares, then dig where the meter peaks. A full meter means metal is directly below. Listen for a low tone for junk, a high tone for a good target, or a middle tone when there is no target directly under the tile.</p><p>Your sweep budget drops by five each location. Sweeping a new tile uses one sweep. You can recheck scanned tiles without spending another. Junk and ghost targets (empty holes) use a dig and are marked with ×. Good finds, including modern clad coins, are marked with ★. If you run out of sweeps, you can still dig any peaks you already located. Find the required treasures to advance. On a keyboard, use the arrow keys to move between tiles, Enter or Space to sweep, and D to dig.</p></details>
 <div class="bottom"><span class="small" id="score"></span><button class="secondary" id="restart">Restart expedition</button></div>
 </main></div>
 <dialog id="find-reveal" aria-labelledby="find-title">
@@ -166,7 +166,11 @@ function sweep(i) {
   $('status').textContent = coordinate(i) + ' · ' + (holes.has(i) ? 'Already dug.' :
     value === 100 ? 'Peak signal. Metal is directly below.' :
     value ? 'Metal nearby. Sweep adjacent tiles.' : 'No signal. Try another tile.');
-  if (value) beep(220 + value * 6);
+  if (!holes.has(i)) {
+    const target = targets.get(i);
+    if (!target) beep(520);
+    else beep(target.valuable ? 960 : 240);
+  }
   checkRound();
   render();
 }
